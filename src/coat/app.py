@@ -7,8 +7,14 @@ import os
 import pathlib
 import sys
 
-# sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src")
+# sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src/mod")
+sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src/coat/")
+sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src")
 sys.path.append(str(pathlib.Path().absolute()).split("/src")[0])
+
+"sys path:"
+st.write(sys.path)
+st.divider()
 
 
 
@@ -17,18 +23,21 @@ st.write(os.getcwd())
 " list dirs"
 st.write(os.listdir())
 
-"sys path"
-st.write(sys.path)
 
 "pew"
-import mod
-st.write(mod.hi.la)
+import src
+src
+import src.coat
+src.coat
 
-import sosed
-sosed.sos
+# import src.mod
+# st.write(src.mod.hi.la)
 
-import utils
-utils.utils
+# import sosed
+# sosed.sos
+
+# import utils
+# utils.utils
 
 
 # with st.echo(code_location='below'):

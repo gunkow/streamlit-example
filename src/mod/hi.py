@@ -1,1 +1,1 @@
-la = "wow"
+la = "mod.hi"

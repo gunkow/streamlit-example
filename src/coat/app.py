@@ -7,10 +7,19 @@ import os
 import pathlib
 import sys
 
+
+
 # sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src/mod")
-sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src/coat/")
-sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src")
-sys.path.append(str(pathlib.Path().absolute()).split("/src")[0])
+# sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src/coat")
+
+def add_sys_path(path):
+    if path not in sys.path:
+        sys.path.append(path)
+
+add_sys_path(str(pathlib.Path().absolute()).split("/src")[0])
+add_sys_path(str(pathlib.Path().absolute()).split("/src")[0] + "/src")
+add_sys_path(str(pathlib.Path().absolute()).split("/src")[0] + "/src/coat")
+# add_sys_path()
 
 "sys path:"
 st.write(sys.path)
@@ -18,17 +27,13 @@ st.divider()
 
 
 
-"getcwd"
-st.write(os.getcwd())
-" list dirs"
-st.write(os.listdir())
-
-
 "pew"
 import src
 src
-import src.coat
-src.coat
+import src.coat.coat_utils
+src.coat.coat_utils.coat_util
+
+
 
 # import src.mod
 # st.write(src.mod.hi.la)

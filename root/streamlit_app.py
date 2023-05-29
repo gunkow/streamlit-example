@@ -12,7 +12,7 @@ st.write(os.listdir())
 
 "sys path"
 import sys
-print(sys.path)
+st.write(sys.path)
 
 "pew"
 import mod

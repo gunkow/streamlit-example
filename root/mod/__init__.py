@@ -1,2 +1,2 @@
-import hi
+import mod.hi
 

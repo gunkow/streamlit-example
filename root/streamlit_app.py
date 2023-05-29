@@ -4,6 +4,13 @@ import math
 import pandas as pd
 import streamlit as st
 import os
+import pathlib
+import sys
+
+# sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src")
+sys.path.append(str(pathlib.Path().absolute()).split("/src")[0])
+
+
 
 "getcwd"
 st.write(os.getcwd())
@@ -11,12 +18,18 @@ st.write(os.getcwd())
 st.write(os.listdir())
 
 "sys path"
-import sys
 st.write(sys.path)
 
 "pew"
 import mod
 st.write(mod.hi.la)
+
+import sosed
+sosed.sos
+
+import utils
+utils.utils
+
 
 # with st.echo(code_location='below'):
 #     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)

@@ -5,11 +5,14 @@ import pandas as pd
 import streamlit as st
 import os
 
-"HW"
+"getcwd"
 st.write(os.getcwd())
-# list dirs
+" list dirs"
 st.write(os.listdir())
 
+"sys path"
+import sys
+print(sys.path)
 
 "pew"
 import mod

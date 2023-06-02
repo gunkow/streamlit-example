@@ -35,11 +35,13 @@ src.coat.coat_utils.coat_util
 
 import src.mod
 f"src.mod {src.mod}"
-"src.mod.mod.hi ", src.mod.mod.hi
+"src.mod.mod.hi :"
+src.mod.mod.hi
 
 import root
 
-"root.sosed ", root.sosed
+"root.sosed :"
+root.root.sosed
 
 # import src.mod
 # st.write(src.mod.hi.la)

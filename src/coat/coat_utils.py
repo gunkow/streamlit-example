@@ -1,1 +1,1 @@
-coat_util = "coat_util!!!"
+coat_util = "src/coat/coat_utils"

@@ -8,40 +8,50 @@ import pathlib
 import sys
 
 
-
-# sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src/mod")
-# sys.path.append(str(pathlib.Path().absolute()).split("/src")[0] + "/src/coat")
+st.write("__file__:")
+__file__
+st.divider()
 
 def add_sys_path(path):
     if path not in sys.path:
-        sys.path.append(path)
+        sys.path.insert(0, path)
+"str(pathlib.Path(__file__).resolve().parent.parent.parent)"
+st.write(str(pathlib.Path(__file__).resolve().parent.parent.parent))
 
-add_sys_path(str(pathlib.Path().absolute()).split("/src")[0])
-add_sys_path(str(pathlib.Path().absolute()).split("/src")[0] + "/src")
-add_sys_path(str(pathlib.Path().absolute()).split("/src")[0] + "/src/coat")
+st.divider()
+
+add_sys_path(str(pathlib.Path(__file__).resolve().parent.parent.parent))
+# add_sys_path(str(pathlib.Path().absolute()).split("/src")[0] + "/src")
+# add_sys_path(str(pathlib.Path().absolute()).split("/src")[0] + "/src/mod")
+# add_sys_path(str(pathlib.Path().absolute()).split("/src")[0] + "/src/coat")
 # add_sys_path()
 
 "sys path:"
 st.write(sys.path)
 st.divider()
 
+# import root
+# "root.sosed :"
+# root.root.sosed
 
+# import mod
+# f"src.mod {mod}"
+# "src.mod.mod.hi :"
+# mod.mod.hi
 
 "pew"
 import src
-src
+dir(src)
+st.divider()
+
+from src import coat
+
+import src.coat
 import src.coat.coat_utils
 src.coat.coat_utils.coat_util
 
-import src.mod
-f"src.mod {src.mod}"
-"src.mod.mod.hi :"
-src.mod.mod.hi
 
-import root
 
-"root.sosed :"
-root.root.sosed
 
 # import src.mod
 # st.write(src.mod.hi.la)
